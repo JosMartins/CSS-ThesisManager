@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{docente_layout :: docente_layout (~{::section})}">
+
+<body>
+
+<section>
+
+    <h2>Registar Tema:</h2>
+    <br>
+    <div class="error" th:text="${error}"></div>
+
+    <br>
+    <form action="#" th:action="@{'/docente/' + ${docente.id} + '/temas/registar'}" th:object="${tema}" method="post">
+        <label for="nome">Nome:</label> <br>
+        <input type="text" name="nome" th:field="*{titulo}" required>
+        <label for="descricao">Descrição:</label><br>
+        <textarea name="descricao" th:field="*{descricao}" rows="5" cols="33" maxlength="2048"></textarea><br><br>
+        <label for="remuneracao">Remuneração Mensal:</label> <br>
+        <input type="text" name="remunracao" th:if="${tema.remuneracaoMensal != null}" th:field="*{remuneracaoMensal}">
+        <label for="mestrados">Mestrados:</label><br>
+
+        <div th:each="mestrado : ${mestrados}">
+            <input type="checkbox" th:value="${mestrado.id}" name="selectedMestrados">
+            <label th:text="${mestrado.nome}"></label>
+        </div>
+        <div>
+            <button type="submit">Adicionar</button>
+        </div>
+    </form>
+
+</section>
+
+</body>
+
+</html>

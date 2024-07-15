@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html th:replace="~{layout :: layout(~{::section})}">
+
+<body>
+<section>
+    <h2>Register Utilizador Empresarial</h2>
+
+    <div class="error" th:text="${error}"></div>
+
+    <form action="#" th:action="@{/utilizador-empresarial/registar}" th:object="${utilizadorEmpresarial}" method="post">
+        <label for="username">Username:</label><input name="username" th:field="*{username}"><br>
+        <label for="password">Password:</label><input type="password" name="password" th:field="*{password}"><br>
+        <label for="empresa">Empresa:</label><input type="text" name="empresa" th:field="*{nomeEmpresa}" ><br>
+        <input type="submit" value="Register">
+    </form>
+</section>
+</body>
+
+</html>
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html th:fragment="admin_layout (content)" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ThesisManager</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+<body>
+<br><br>
+<h2 th:text="'  Olá ' + ${admin.username.substring(0, admin.username.indexOf('@'))} + ','"> ... </h2> <br>
+
+<ul class="horizontal-list">
+    <li><a th:href="@{'/admin/' + ${admin.id} + '/candidaturas'}">Candidaturas Manuais</a></li>
+    <li><a th:href="@{/docentes}">Listar Docentes</a></li>
+    <li><a th:href="@{/utilizadores-empresariais}">Listar Utilizadores empresariais</a></li>
+</ul>
+
+<div th:replace="${content}">
+    <p>
+        Standard Content
+    </p>
+</div>
+
+</body>
+
+<style>
+    ul.horizontal-list {
+        list-style: none;
+        margin: 0;
+        padding: 5px;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    ul.horizontal-list li {
+        margin: 0;
+        float: left;
+    }
+
+    ul.horizontal-list li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    ul.horizontal-list li a:hover {
+        background-color: #111;
+    }
+</style>
+</html>

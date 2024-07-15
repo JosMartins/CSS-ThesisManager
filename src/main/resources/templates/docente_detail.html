@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html th:replace="~{layout :: layout(~{::section})}">
+
+<body>
+<section>
+    <h2>Docente:</h2>
+
+    <table>
+        <tr>
+            <th>Name:</th>
+            <td th:text="${docente.username}"></td>
+        </tr>
+        <tr th:if="${docente.occupacao.empty}">
+            <td> Docente sem horarios marcados.</td>
+        </tr>
+
+        <tr th:if="${!docente.occupacao.empty}">
+            <th>Ocupação:</th>
+            <td th:text="${docente.occupacao.get(0)}"></td>
+        </tr>
+
+    </table>
+
+
+    <a th:href="@{/docente/} + ${docente.id} + @{/delete}">(Delete Docente)</a>
+</section>
+</body>
+
+</html>

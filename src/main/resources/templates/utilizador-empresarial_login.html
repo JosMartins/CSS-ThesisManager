@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Thesis Manager</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+<style>
+    .loginContainer {
+        align-content: center;
+        text-align: center;
+    }
+</style>
+<body>
+<section>
+    <div class="loginContainer">
+        <br>
+        <h3 class="">Login Utilizador Empresarial</h3>
+        <br>
+        <form action="#" th:action="@{/utilizadores-empresariais/login}" th:object="${uE}" method="post">
+            <label for="user">Email:</label> <br><input name="user" th:field="*{username}"><br><br>
+            <label for="password">Password:</label> <br><input type="password" name="password" th:field="*{password}"><br>
+            <br>
+            <div th:text="${wrongPass}"> </div> <br>
+            <input type="submit" value="Login">
+            <br>
+        </form>
+        <a th:href="@{registar}">Registo</a>
+    </div>
+
+</section>
+
+</body>
+
+</html>

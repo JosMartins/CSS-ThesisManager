@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{utilizador-empresarial_layout :: utilizador-empresarial_layout (~{::section})}">
+<body>
+<section>
+    <table>
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${temas.empty}">
+            <td colspan="3">Sem Temas Para o ano letivo</td>
+        </tr>
+
+        <tr th:each="t : ${temas}">
+            <td th:text="${t.titulo}">...</td>
+            <td th:text="${t.descricao}">...</td>
+            <td>
+                <table>
+                    <tr th:each="m : ${t.mestradosCompativeis}">
+                        <td th:text="${m.nome}">...</td>
+                </table>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+    <br>
+    <div>
+        <a th:href="@{'/utilizador-empresarial/' + ${uE.id} + '/temas/registar'}"> Registar Tema</a>
+        <!-- <button th:onclick="|location.href='@{/utilizador-empresarial/' + ${uE.id} + '/temas/registar}'|"> Registar Tema</button>
+        -->
+
+    </div>
+</section>
+</body>
+</html>

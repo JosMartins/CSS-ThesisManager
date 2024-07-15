@@ -1,0 +1,97 @@
+{
+  "id": 1,
+  "aluno": {
+    "id": 2,
+    "username": "fc58228@alunos.fc.ul.pt",
+    "password": "jose",
+    "login": false,
+    "mestrado": null,
+    "media": 0.0,
+    "propostaTese": null,
+    "tese": null
+  },
+  "listaTemas": [
+    {
+      "id": 1,
+      "titulo": "Seguraça",
+      "descricao": "Fazer computadores e comunicacoes seguras.",
+      "mestradosCompativeis": [
+        {
+          "id": 1,
+          "nome": "Engenharia Informática",
+          "alunosInscritos": []
+        },
+        {
+          "id": 4,
+          "nome": "Engenharia de Telecomunicações",
+          "alunosInscritos": []
+        }
+      ],
+      "remuneracaoMensal": 750.5
+    },
+    {
+      "id": 2,
+      "titulo": "Software",
+      "descricao": "Aprender padroes de sofware e como os aplicar.",
+      "mestradosCompativeis": [
+        {
+          "id": 1,
+          "nome": "Engenharia Informática",
+          "alunosInscritos": []
+        },
+        {
+          "id": 4,
+          "nome": "Engenharia de Telecomunicações",
+          "alunosInscritos": []
+        }
+      ],
+      "remuneracaoMensal": 650.5
+    },
+    {
+      "id": 3,
+      "titulo": "Jogos",
+      "descricao": "Aprender a fazer jogos.",
+      "mestradosCompativeis": [
+        {
+          "id": 1,
+          "nome": "Engenharia Informática",
+          "alunosInscritos": []
+        }
+      ],
+      "remuneracaoMensal": 500.5
+    },
+    {
+      "id": 4,
+      "titulo": "Medicina informatica",
+      "descricao": "Estudar formas de aplicar a tecnologia informatica na medicina.",
+      "mestradosCompativeis": [
+        {
+          "id": 1,
+          "nome": "Engenharia Informática",
+          "alunosInscritos": []
+        },
+        {
+          "id": 2,
+          "nome": "Engenharia Biomédica",
+          "alunosInscritos": []
+        }
+      ],
+      "remuneracaoMensal": 430.2
+    },
+    {
+      "id": 5,
+      "titulo": "Materiais",
+      "descricao": "Estudar a composicao dos materias e como pode ser aplicada na engenharia e construcao.",
+      "mestradosCompativeis": [
+        {
+          "id": 3,
+          "nome": "Engenharia de Materiais",
+          "alunosInscritos": []
+        }
+      ],
+      "remuneracaoMensal": 201.4
+    }
+  ],
+  "temaAtribuido": null,
+  "tese": null
+}

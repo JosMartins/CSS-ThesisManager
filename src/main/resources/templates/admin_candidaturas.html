@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{admin_layout :: admin_layout(~{::section})}">
+<body>
+<section>
+    <table>
+        <thead>
+        <tr>
+            <th>Aluno</th>
+            <th>Tema Atribuido</th>
+            <th>Lista de Temas</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${candidaturas.empty}">
+            <td colspan="3">Sem Temas Para o ano letivo</td>
+        </tr>
+        <tr th:each="c, stat : ${candidaturas}">
+            <form th:action="@{'/admin/' + ${admin.id} + '/candidaturas'}" method="post">
+                <td th:text="${c.aluno.username}">...</td>
+                <td th:if="${c.temaAtribuido != null}" th:text="${c.temaAtribuido.titulo}">...</td>
+                <td th:if="${c.temaAtribuido == null}"> - </td>
+
+                <div th:each=" tema : ${c.listaTemas}" th:if="${c.temaAtribuido == null}">
+                    <input type="radio" th:value="${tema.id}" th:name="'selectedMestrados' + ${stat.index}">
+                    <label th:text="${tema.titulo}"></label>
+                </div>
+                <input type="hidden" th:value="${c.id}" name="candidaturaId">
+                <td><button type="submit">Submit</button></td>
+            </form>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+
+</section>
+</body>
+</html>

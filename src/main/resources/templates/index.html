@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ThesisMan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+
+<body>
+
+<br><br>
+<h2>Thesis Manager - Gestor de Mestrados</h2><br>
+<ul class="horizontal-list">
+    <li><a th:href="@{/docentes/login}">Login Docentes</a></li>
+    <li><a th:href="@{/utilizadores-empresariais/login}">Login Utilizadores Empresariais</a></li>
+</ul>
+
+</body>
+
+<div class="admin-login">
+    <footer>
+        <a th:href="@{/admin/login}">admin login</a>
+    </footer>
+</div>
+<style>
+    ul.horizontal-list {
+        list-style: none;
+        margin: 0;
+        padding: 5px;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    ul.horizontal-list li {
+        margin: 0;
+        float: left;
+    }
+
+    ul.horizontal-list li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    ul.horizontal-list li a:hover {
+        background-color: #111;
+    }
+
+    .admin-login {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+
+</html>

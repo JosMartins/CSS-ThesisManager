@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Thesis Manager</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+<style>
+    .loginContainer {
+        align-content: center;
+        text-align: center;
+    }
+</style>
+<body>
+<section>
+    <div class="loginContainer">
+        <div class="error" th:text="${error}"></div>
+        <br>
+        <h3 class="">Login Docentes</h3>
+        <br>
+        <form action="#" th:action="@{/docentes/login}" th:object="${docente}" method="post">
+            <label for="user">Email Institucional:</label> <br><input name="user" th:field="*{username}"><br><br>
+            <label for="password">Password:</label> <br><input type="password" name="password" th:field="*{password}"><br>
+            <br>
+            <div th:text="${wrongPass}"> </div> <br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+</section>
+
+</body>
+
+</html>

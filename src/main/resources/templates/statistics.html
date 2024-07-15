@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout(~{::section})}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ThesisMan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+
+<body>
+<br><br><br>
+<section>
+    <table>
+        <thead>
+        <tr>
+            <th>Estatistica</th>
+            <th>Valor</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Total Defesas</td>
+            <td th:text="${totalDefesas}">...</td>
+        </tr>
+
+        <tr>
+            <td>Defesas Aprovadas</td>
+            <td th:text="${defesasPassados}">...</td>
+        </tr>
+
+        <tr>
+            <td>Defesas Reprovadas</td>
+            <td th:text="${defesasReprovados}">...</td>
+        </tr>
+
+        <tr>
+            <td>Media</td>
+            <td th:text="${mediaNotas}">...</td>
+        </tbody>
+    </table>
+</section>
+</body>
+
+<style>
+    ul.horizontal-list {
+        list-style: none;
+        margin: 0;
+        padding: 5px;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    ul.horizontal-list li {
+        margin: 0;
+        float: left;
+    }
+
+    ul.horizontal-list li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    ul.horizontal-list li a:hover {
+        background-color: #111;
+    }
+
+    .admin-login {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+
+</html>
