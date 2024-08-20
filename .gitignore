@@ -33,3 +33,6 @@ build/
 .vscode/
 .cache
 /bin/
+
+### MacOS ###
+.DS_Store
