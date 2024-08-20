@@ -188,18 +188,18 @@ public class WebDocenteController {
     }
 
     @PostMapping("/docente/{id}/propostatese/")
-    public String setNotaTese(final Model model, @PathVariable Long id, @ModelAttribute Long DefesaId, @ModelAttribute Double Nota) {
+    public String setNotaTese(final Model model, @PathVariable Long id, @ModelAttribute Long defesaId, @ModelAttribute Double nota) {
         logger.debug("POST - /docente/{}/propostatese", id);
         Optional<DocenteDTO> d = docenteService.getDocente(id);
         if (d.isPresent() && d.get().getLogin()) {
             model.addAttribute("docente", d.get());
             try {
                 // Assuming you have access to the required variables
-                // Replace "DefesaId" and "Nota" with actual variables
-                logger.debug("DefesaId: {}, Nota: {}", DefesaId, Nota);
+                // Replace "defesaId" and "nota" with actual variables
+                logger.debug("defesaId: {}, nota: {}", defesaId, nota);
 
                 // Assuming this is the correct service method call and parameters
-                candPropostaTeseService.setNota(DefesaId, Nota);
+                candPropostaTeseService.setNota(defesaId, nota);
             } catch (ApplicationException e) {
                 model.addAttribute("error", e.getMessage());
                 return "docente_propostatese";

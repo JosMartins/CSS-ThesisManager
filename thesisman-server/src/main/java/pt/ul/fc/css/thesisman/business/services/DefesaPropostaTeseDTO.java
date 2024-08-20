@@ -1,13 +1,9 @@
 package pt.ul.fc.css.thesisman.business.services;
 
 import java.util.Calendar;
-
-import javax.swing.text.Document;
-
 import org.springframework.stereotype.Component;
 
 import pt.ul.fc.css.thesisman.datatypes.ModalidadeApresentacao;
-import pt.ul.fc.css.thesisman.entities.DefesaPropostaTese;
 
 @Component
 public class DefesaPropostaTeseDTO {

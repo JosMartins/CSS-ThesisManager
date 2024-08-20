@@ -3,8 +3,6 @@ package pt.ul.fc.css.thesisman.business.services;
 import java.util.Calendar;
 
 import pt.ul.fc.css.thesisman.datatypes.ModalidadeApresentacao;
-import pt.ul.fc.css.thesisman.entities.DefesaTese;
-
 
 public class DefesaTeseDTO {
 

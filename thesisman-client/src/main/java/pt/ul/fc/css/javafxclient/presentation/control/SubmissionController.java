@@ -5,10 +5,6 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import javax.swing.text.BadLocationException;
-import javax.swing.text.Document;
-import javax.swing.text.PlainDocument;
-
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;

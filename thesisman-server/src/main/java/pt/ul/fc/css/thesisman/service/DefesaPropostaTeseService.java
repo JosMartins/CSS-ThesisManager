@@ -9,12 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Component;
 import pt.ul.fc.css.thesisman.business.services.AlunoDTO;
-import pt.ul.fc.css.thesisman.business.services.CandidaturaTeseDTO;
 import pt.ul.fc.css.thesisman.business.services.DefesaPropostaTeseDTO;
 import pt.ul.fc.css.thesisman.business.services.DocenteDTO;
 import pt.ul.fc.css.thesisman.business.services.exceptions.ApplicationException;
 import pt.ul.fc.css.thesisman.datatypes.ModalidadeApresentacao;
-import pt.ul.fc.css.thesisman.datatypes.SlotTempo;
 import pt.ul.fc.css.thesisman.entities.*;
 import pt.ul.fc.css.thesisman.repositories.AlunoRepositorio;
 import pt.ul.fc.css.thesisman.repositories.DefesaPropostaTeseRepositorio;

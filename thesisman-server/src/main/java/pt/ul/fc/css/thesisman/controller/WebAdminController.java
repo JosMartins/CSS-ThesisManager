@@ -3,22 +3,17 @@ package pt.ul.fc.css.thesisman.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pt.ul.fc.css.thesisman.business.services.*;
 import pt.ul.fc.css.thesisman.business.services.exceptions.ApplicationException;
 import pt.ul.fc.css.thesisman.entities.Administrador;
-import pt.ul.fc.css.thesisman.entities.Docente;
-import pt.ul.fc.css.thesisman.repositories.AdministradorRepositorio;
 import pt.ul.fc.css.thesisman.service.AdministradorService;
 import pt.ul.fc.css.thesisman.service.CandidaturaTeseService;
 import pt.ul.fc.css.thesisman.service.DocenteService;
 import pt.ul.fc.css.thesisman.service.UtilizadorEmpresarialService;
 
-import java.util.List;
 import java.util.Optional;
 
 @Controller

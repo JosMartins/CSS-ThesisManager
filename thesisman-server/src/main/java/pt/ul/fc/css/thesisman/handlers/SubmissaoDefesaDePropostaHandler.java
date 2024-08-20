@@ -37,7 +37,7 @@ public class SubmissaoDefesaDePropostaHandler extends Handler {
 	
 //TODO - provavelmente vai ter de receber horaInicio 
 //TODO - ver se faz sentido ser boolean
-    public boolean marcarDefesaDeProposta(Tese tese, ModalidadeApresentacao modalidadeApresentacao , Docente docenteJuri) throws EmptyFieldException, AlreadyExistsException{
+    public boolean marcarDefesaDeProposta(Tese tese, ModalidadeApresentacao modalidadeApresentacao , Docente docenteJuri) throws EmptyFieldException {
     	
     	if(tese == null) {
     		throw new EmptyFieldException("É necessário inserir uma tese");

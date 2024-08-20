@@ -2,12 +2,8 @@ package pt.ul.fc.css.thesisman.business.services;
 
 import java.util.List;
 
-import org.springframework.lang.NonNull;
-
-import jakarta.persistence.ElementCollection;
 import org.springframework.stereotype.Component;
 import pt.ul.fc.css.thesisman.datatypes.SlotTempo;
-import pt.ul.fc.css.thesisman.entities.Sala;
 
 @Component
 public class SalaDTO {

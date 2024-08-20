@@ -1,6 +1,5 @@
 package pt.ul.fc.css.thesisman.service;
 
-import javax.swing.text.Document;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

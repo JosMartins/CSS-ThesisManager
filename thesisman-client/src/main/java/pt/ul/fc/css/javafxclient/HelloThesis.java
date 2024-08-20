@@ -1,13 +1,10 @@
 package pt.ul.fc.css.javafxclient;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import pt.ul.fc.css.javafxclient.presentation.control.LoginController;
-import pt.ul.fc.css.javafxclient.presentation.control.TemasController;
 
 public class HelloThesis extends Application {
 

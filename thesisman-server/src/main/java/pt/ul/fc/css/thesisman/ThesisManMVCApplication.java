@@ -7,7 +7,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import pt.ul.fc.css.thesisman.datatypes.ModalidadeApresentacao;
 import pt.ul.fc.css.thesisman.entities.Administrador;
 import pt.ul.fc.css.thesisman.entities.Docente;
 import pt.ul.fc.css.thesisman.repositories.AdministradorRepositorio;
@@ -18,8 +17,6 @@ import pt.ul.fc.css.thesisman.repositories.*;
 
 
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.LinkedList;
 import java.util.List;
 
 @SpringBootApplication
@@ -40,7 +37,7 @@ public class ThesisManMVCApplication {
                                   DefesaPropostaTeseRepositorio defesaPropostaTeseRep,
                                   DefesaTeseRepositorio defesaTeseRep
                                   ) {
-        return (args) -> {
+        return args -> {
             log.info("Aplicacao Iniciada");
 
             ///Populacao da base de dados

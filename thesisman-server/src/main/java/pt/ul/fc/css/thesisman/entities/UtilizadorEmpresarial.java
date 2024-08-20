@@ -6,7 +6,6 @@ import jakarta.persistence.DiscriminatorValue;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToOne;
-import pt.ul.fc.css.thesisman.business.services.UtilizadorEmpresarialDTO;
 
 import org.springframework.lang.NonNull;
 

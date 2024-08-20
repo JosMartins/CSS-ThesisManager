@@ -2,7 +2,6 @@ package pt.ul.fc.css.thesisman.business.services;
 
 import org.springframework.stereotype.Component;
 import pt.ul.fc.css.thesisman.datatypes.SlotTempo;
-import pt.ul.fc.css.thesisman.entities.Docente;
 
 import java.util.List;
 

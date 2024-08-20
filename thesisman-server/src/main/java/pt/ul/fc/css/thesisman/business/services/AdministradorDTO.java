@@ -1,12 +1,8 @@
 package pt.ul.fc.css.thesisman.business.services;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
-
-import pt.ul.fc.css.thesisman.entities.Administrador;
-import pt.ul.fc.css.thesisman.entities.CandidaturaTese;
 
 @Component
 public class AdministradorDTO {

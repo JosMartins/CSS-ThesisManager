@@ -1,12 +1,9 @@
 package pt.ul.fc.css.thesisman.business.services;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import org.springframework.stereotype.Component;
-
-import pt.ul.fc.css.thesisman.entities.Mestrado;
-import pt.ul.fc.css.thesisman.entities.Tema;
 
 @Component
 public class TemaDTO {

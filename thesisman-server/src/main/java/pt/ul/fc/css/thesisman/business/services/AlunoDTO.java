@@ -1,11 +1,7 @@
 package pt.ul.fc.css.thesisman.business.services;
 
-import javax.swing.text.Document;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.stereotype.Component;
-
-import pt.ul.fc.css.thesisman.entities.Aluno;
 
 @Component
 @JsonIgnoreProperties(ignoreUnknown = true)
