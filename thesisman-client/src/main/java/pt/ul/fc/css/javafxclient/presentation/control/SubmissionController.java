@@ -22,7 +22,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import pt.ul.fc.css.javafxclient.presentation.model.Aluno;
-import pt.ul.fc.css.thesisman.business.services.AlunoDTO;
 
 public class SubmissionController {
 	
