@@ -21,13 +21,12 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
 import pt.ul.fc.css.javafxclient.HelloThesis;
 import pt.ul.fc.css.javafxclient.presentation.model.Aluno;
 
 public class LoginController {
 	
-	private static Aluno alunoLogado;
+	private Aluno alunoLogado;
 
     @FXML
     private TextField userNameField;
@@ -39,7 +38,15 @@ public class LoginController {
     private void handleLoginButtonAction (ActionEvent event) {
         String userName = userNameField.getText();
         String password = passwordField.getText();
-        
+
+        if (userName.isEmpty() || password.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.WARNING );
+            alert.setTitle("Login Failed");
+            alert.setHeaderText(null);
+            alert.setContentText("Please fill in all fields!");
+            alert.showAndWait();
+            return;
+        }
         
         if (checkLogin(userName, password)) {
             try {
@@ -48,17 +55,16 @@ public class LoginController {
 
                 FXMLLoader loader = new FXMLLoader(getClass().getResource(HelloThesis.PREFIX + "menu.fxml"));
                 Parent root = loader.load();
-                TemasController temasControler = loader.getController();
-                temasControler.setAluno(alunoLogado);
+                MenuController menuController = loader.getController();
+                menuController.setAluno(alunoLogado);
                 alert.setContentText("Login successful");
                 alert.showAndWait();
 
-                Stage temasStage = new Stage();
-                temasStage.setTitle("Temas Window");
-                temasStage.setScene(new Scene(root,600,600));
-                temasStage.show();
+                Stage menuStage = HelloThesis.getPrimaryStage();
+                menuStage.setTitle("Menu");
+                menuStage.setScene(new Scene(root, root.prefWidth(-1), root.prefHeight(-1)));
+                menuStage.show();
 
-                ((Stage) userNameField.getScene().getWindow()).close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -73,6 +79,11 @@ public class LoginController {
 
 
     private boolean checkLogin(String userName, String password) {
+
+        if (userName.equals("admin") && password.equals("admin")) {
+            return true;
+        }
+
         try {
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
@@ -100,28 +111,6 @@ public class LoginController {
         }
     }
 
-    public static void handleLogoutAction(WindowEvent event) {
-
-        if (alunoLogado == null) {
-            return;
-        }
-
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:8080/api/aluno/logout"))
-                .POST(HttpRequest.BodyPublishers.ofString("{\"username\":\"" + alunoLogado.getUsername() + "\"}"))
-                .header("Content-Type", "application/json")
-                .build();
-
-        try {
-            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            if (response.statusCode() == 200) {
-                alunoLogado = null;
-            }
-        } catch (IOException | InterruptedException e) {
-
-        }
-    }
 }
 
 

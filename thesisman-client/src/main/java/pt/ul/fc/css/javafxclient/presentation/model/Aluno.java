@@ -7,14 +7,15 @@ import javafx.beans.property.*;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Aluno {
 
-    private final LongProperty id = new SimpleLongProperty();
+    //private final LongProperty id = new SimpleLongProperty();
     private final StringProperty username = new SimpleStringProperty();
     private final DoubleProperty media = new SimpleDoubleProperty();
     private final ObjectProperty<Mestrado> mestrado = new SimpleObjectProperty<>();
     private final ObjectProperty<Tese> tese = new SimpleObjectProperty<>();
     private final StringProperty token = new SimpleStringProperty();
 
-    public final LongProperty idProperty() {
+    private final StringProperty tokenProperty = new SimpleStringProperty();
+/*    public final LongProperty idProperty() {
         return this.id;
     }
 
@@ -25,7 +26,7 @@ public class Aluno {
     public final void setId(final long newId) {
         this.idProperty().set(newId);
     }
-
+*/
     public final StringProperty usernameProperty() {
         return this.username;
     }
